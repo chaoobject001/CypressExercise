@@ -1,3 +1,7 @@
 {
-    "baseUrl": "https://demoblaze.com"
+    "baseUrl": "https://demoblaze.com",
+    "retries": {
+        "runMode": 2,
+        "openMode": 3
+      }
 }
