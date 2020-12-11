@@ -1,9 +1,7 @@
 ### Background
-
 This is the demo app that showcase a Cypress exercise.
 
 ### Test Steps
-
 1. Navigate to https://demoblaze.com
 2. Click signup and create a new account
 3. Login to your account
