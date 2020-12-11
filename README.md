@@ -12,3 +12,7 @@ This is the demo app that showcase a Cypress exercise.
 
 ### Credential
 Test fixture secrets.json can be injected by CI/CD pipeline to secure test credentials 
+
+### Test execution
+1. Run test in geadless mode: npm run cy:run
+2. Run test with browser: npm run cy:open
