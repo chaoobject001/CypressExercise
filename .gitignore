@@ -1,0 +1,4 @@
+# Dependency directory & Other local test artifact
+node_modules
+cypress/videos
+cypress/screenshots

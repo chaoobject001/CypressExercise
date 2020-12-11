@@ -1,0 +1,23 @@
+{
+  "name": "cypressexercise",
+  "version": "1.0.0",
+  "description": "Cypress demo",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "cypress": "^6.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chaoobject001/CypressExercise.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chaoobject001/CypressExercise/issues"
+  },
+  "homepage": "https://github.com/chaoobject001/CypressExercise#readme"
+}
