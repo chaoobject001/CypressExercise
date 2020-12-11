@@ -6,12 +6,14 @@ describe("Demo", function () {
     })
 
     beforeEach(() => {
-        cy.visit("https://demoblaze.com");
+        // Navigate to https://demoblaze.com
+        cy.visit("/");
         cy.title().should("equal", "STORE"); 
     })
 
     describe("Account Creation", function () {
         it("should signup and create a new account", function () {
+            //Click signup and create a new account
             cy.get("#signin2").click();
             cy.get(".modal-content").should("be.visible");
 
@@ -36,6 +38,7 @@ describe("Demo", function () {
     describe("Login", function () {
         it("should login to an existing account", function () {   
             cy.fixture("secrets").then((secrets) => {
+                // Login to your account
                 cy.login(this.freshUsername, secrets.Password)
             })
             cy.get("#nameofuser").should("contain", this.freshUsername);          
@@ -45,6 +48,7 @@ describe("Demo", function () {
     describe("Cart", function () {
         it("should add expected item to cart", function () {
             cy.fixture("secrets").then((secrets) => {
+                // Login to your account
                 cy.login(this.freshUsername, secrets.Password)
             })
 
@@ -67,7 +71,8 @@ describe("Demo", function () {
 
             // Navigate to the cart, and verify that you have the correct phone model
             cy.get("#cartur").click();
-            cy.get("tr.success").should("contain", "Samsung galaxy s6");
+            cy.get("tr.success").should("contain", "Samsung galaxy s6")
+                .and("have.length", 1);
         })
     })
 })
