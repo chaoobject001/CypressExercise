@@ -24,12 +24,26 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
-Cypress.Commands.add("login", (username, password) => { 
-    cy.get("#login2").click();
-    cy.get(".modal-content").should("be.visible");
-    cy.get("#loginusername").invoke("val", username)
-        .should("have.value", username);
-    cy.get("#loginpassword").invoke("val", password);
-    cy.contains("button", "Log in").click();
-    cy.get(".modal-content").should("not.be.visible");
-})
+Cypress.Commands.add("login", (email, password) => {
+    cy.visit("/account/login") 
+    cy.get("#email").type(email);
+    cy.get("#password").type(password);
+    cy.get("#form-submit-button").click();
+});
+
+Cypress.Commands.add("updateAddressField", (id, value) => {
+    if(id === "country" || id === "state") {
+        cy.get(`#${id}`).select(value);
+    } else {
+        cy.get(`#${id}`).clear().type(value);
+    }
+});
+
+Cypress.Commands.add("emptyAddressField", (id) => {
+    if(id === "country" || id === "state") {
+        // leave as is
+    } else {
+        cy.get(`#${id}`).clear();
+    }
+});
+

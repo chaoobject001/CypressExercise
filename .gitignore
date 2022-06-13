@@ -2,3 +2,5 @@
 node_modules
 cypress/videos
 cypress/screenshots
+fixtures/secrets.json
+Note.txt

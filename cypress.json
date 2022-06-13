@@ -1,7 +1,7 @@
 {
-    "baseUrl": "https://demoblaze.com",
     "retries": {
         "runMode": 2,
         "openMode": 3
-      }
+    },
+    "baseUrl": "https://www.lovevery.com"
 }
